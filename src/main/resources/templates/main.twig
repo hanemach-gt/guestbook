@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guest book</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<div class="content">
+    <div class="entries">
+    {% for entry in entries %}
+      {{ entry }}
+    {% endfor %}
+    </div>
+    <form method="POST">
+        <table id="form">
+            <tr><td><input id="sender-name" type="text" placeholder="Name" name="author_name" required></td></tr>
+            <tr><td><textarea id="message-body" type="text" placeholder="Message" name="message" required></textarea></td></tr>
+            <tr><td><input id="submit" type="submit" value="Submit"></td></tr>
+        </table>
+    </form>
+    <footer>&copy;KDKL 2018</footer>
+</div>
+</body>
+</html>
